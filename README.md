@@ -3,11 +3,11 @@
 Best E-commerce platform for buying high quality Smart Home Appliances at extremely affordable Price.
 
 ## Live Link
-Hosted in Netlify -> [HeroGadget](https://ema-jhon-firebase.netlify.app/)
+Hosted in Netlify -> [Ema-Jhon](https://ema-jhon-firebase.netlify.app/)
 
 
 ## Starter Template : Without Complete Project
-Github Repo -> [heroGadget-starter](https://github.com/Sanjidul-Alom-Shifat/Ema-John)
+Github Repo -> [Ema-Jhon](https://github.com/Sanjidul-Alom-Shifat/Ema-John)
 
 
 ## React Router Dom v6.4 
