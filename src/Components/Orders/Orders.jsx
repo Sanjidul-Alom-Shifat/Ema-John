@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Cart from '../Cart/Cart';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import './Order.css'
 import { removeFromDb } from '../../utilities/fakedb';
+import { CreditCardIcon } from '@heroicons/react/24/solid'
+
 
 const Orders = () => {
     // for load data using router dom by loadrouter method
@@ -32,7 +34,14 @@ const Orders = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}>
+                    <Link className='proceed-link' to='/checkout'>
+                        <button className='btn-proceed'>
+                            <span>Proceed Checkout</span>
+                            <CreditCardIcon className='iconss' />
+                        </button>
+                    </Link>
+                </Cart>
             </div>
         </div>
     );

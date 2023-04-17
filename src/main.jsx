@@ -12,6 +12,11 @@ import Orders from './Components/Orders/Orders';
 import Inventory from './Components/Inventory/Inventory';
 import Login from './Components/Login/Login';
 import CardProductsLoaders from './Loaders/CardProductsLoders';
+import SignUp from './Components/SignUp/SignUp';
+import { Toaster } from 'react-hot-toast';
+import AuthProviders from './Components/Providers/AuthProviders';
+import PrivateRoute from './Components/Routes/PrivateRoute';
+import Checkout from './Components/Checkout/Checkout';
 
 const router = createBrowserRouter([
   {
@@ -23,17 +28,25 @@ const router = createBrowserRouter([
         element: <Shop></Shop>
       },
       {
-        path: 'orders',
+        path: '/orders',
         element: <Orders></Orders>,
         loader: CardProductsLoaders
       },
       {
-        path: 'inventory',
-        element: <Inventory></Inventory>
+        path: '/checkout',
+        element:<PrivateRoute><Checkout></Checkout></PrivateRoute>
       },
       {
-        path: 'login',
+        path: '/inventory',
+        element: <PrivateRoute><Inventory></Inventory></PrivateRoute>
+      },
+      {
+        path: '/login',
         element: <Login></Login>
+      },
+      {
+        path: '/signup',
+        element: <SignUp></SignUp>
       }
     ]
   }
@@ -41,6 +54,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProviders>
+      <RouterProvider router={router} />
+      <Toaster></Toaster>
+    </AuthProviders>
   </React.StrictMode>,
 )

@@ -1,0 +1,89 @@
+.form-container {
+    width: 500px;
+    
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    margin: 23px auto;
+    padding-left: 40px;
+    padding-left: 40px;
+}
+
+.form-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    /* identical to box height */
+    letter-spacing: 0.0025em;
+    text-align: center;
+    color: #2A414F;
+    margin-bottom: 50px;
+}
+
+.form-control {
+    margin-bottom: 20px;
+}
+
+.form-control label {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    color: #2A414F;
+    margin-bottom: 10px;
+}
+
+.form-control input {
+    width: 415px;
+    height: 55px;
+    border: 1px solid #95A0A7;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+
+.paragraph {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 18px;
+    /* text-align: center; */
+    letter-spacing: 0.0025em;
+    color: #2A414F;
+    margin-left: 80px;
+}
+
+.text-color{
+    color: #FF9900;
+    text-decoration: none;
+}
+
+.paragraph1 {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 18px;
+    /* text-align: center; */
+    letter-spacing: 0.0025em;
+    color: #2A414F;
+    margin-left: 102px;
+}
+
+.btn-login {
+    width: 429px;
+    height: 55px;
+    background: rgba(255, 153, 0, 0.3);
+    border-radius: 5px;
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+    border: none;
+    cursor: pointer;
+    color: #0E161A;
+}
+
+.btn-login:hover {
+    background: rgba(255, 153, 0, 0.6);
+
+}

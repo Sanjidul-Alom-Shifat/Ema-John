@@ -1,9 +1,10 @@
 import React from 'react';
 import './Cart.css';
+import { ArchiveBoxXMarkIcon } from '@heroicons/react/24/solid'
 
-const Cart = (props) => {
+const Cart = ({ cart, handleClearCart, children }) => {
 
-    const { cart } = props; // option get values from cart property
+    // const { cart } = props; // option get values from cart property
 
     let total = 0;
     let totalShipping = 0;
@@ -31,6 +32,11 @@ const Cart = (props) => {
             <p>Total Shipping : ${totalShipping}</p>
             <p>Tax : ${tax.toFixed(2)}</p>
             <h4>Grand Total : ${Grandtotal.toFixed(2)}</h4>
+            <button onClick={handleClearCart} className='btn-clear-cart'>
+                <span>Clear Cart </span>
+                <ArchiveBoxXMarkIcon className='iconss'/>
+            </button>
+            {children}
         </div>
     );
 };
